@@ -132,12 +132,12 @@ defined("CONFIG") ? null : define('CONFIG', 'settings.ini.php');
                         </p>
                         <p>
                         <h4> Splash Screen</h4>
-                        When enabled, Muximux will start with a splash page where you can select which application to view.
+                        When enabled, PiTV will start with a splash page where you can select which application to view.
                         <br><br>
                         </p>
                         <p>
                         <h4> Dropdown Override</h4>
-                        When enabled, a button will appear in the main Muximux bar that will allow overriding the placement of applications in the dropdown menu when viewed on a display detected as being on a mobile device.  Intended for users who have tablets with a smaller display.
+                        When enabled, a button will appear in the main PiTV bar that will allow overriding the placement of applications in the dropdown menu when viewed on a display detected as being on a mobile device.  Intended for users who have tablets with a smaller display.
                         <br><br>
                         </p>
                         <p>
@@ -152,14 +152,14 @@ defined("CONFIG") ? null : define('CONFIG', 'settings.ini.php');
                         </p>
                         <p>
                         <h4> Use Authentication</h4>
-                        When enabled, you can set a username and password which will be required to log into Muximux.  Password is hashed, salted, and stored in settings, so your password is never stored in plain text.
+                        When enabled, you can set a username and password which will be required to log into PiTV.  Password is hashed, salted, and stored in settings, so your password is never stored in plain text.
                         <br><br>
                         </p>
                         <h3>Applications Settings (What does the rest of this stuff do?)</h3>
                         <br>
                         <p>
                         <h4> URL</h4>
-                        Enter the address of the page you want to load.  See below for instructions when serving Muximux over HTTPS.  Url should be fully formatted: 'http://www.address.com'.
+                        Enter the address of the page you want to load.  See below for instructions when serving PiTV over HTTPS.  Url should be fully formatted: 'http://www.address.com'.
                         <br><br>
                         </p>
                         <p>
@@ -194,37 +194,37 @@ defined("CONFIG") ? null : define('CONFIG', 'settings.ini.php');
                         </p>
                         <p>
                         <h4> Default</h4>
-                        Enable this button to make the application the deafult selected item when Muximux is loaded.
+                        Enable this button to make the application the deafult selected item when PiTV is loaded.
                         <br><br>
                         </p>
-                        <h3>Bookmarking apps contained within Muximux</h3>
-                        <p>If you want to go directly to a specific app within Muximux you can use hashes (<code>#</code>) in the URL.
+                        <h3>Bookmarking apps contained within PiTV</h3>
+                        <p>If you want to go directly to a specific app within PiTV you can use hashes (<code>#</code>) in the URL.
                             For instance, if you have an app called "My app" you could use:<br/>
                             <code><script>document.write(location.href.replace(location.hash,""))</script>#My app</code><br/><br/>
-                            This is great for when you want to bookmark specific services contained within Muximux.<br/>
+                            This is great for when you want to bookmark specific services contained within PiTV.<br/>
                             Please note that the hashname should be the exact same as the <code>Name</code> you have configured in the settings below.<br/>
                             If you need to, you can replace spaces with underscores (i.e <code>#My_app</code>).
                             <br/><br/></p>
-                        <h3>Running Muximux from SSL-enabled / HTTPS server</h3>
-                        <p>Please note that if Muximux is served via HTTPS, any services that are NOT served via HTTPS might
+                        <h3>Running PiTV from SSL-enabled / HTTPS server</h3>
+                        <p>Please note that if PiTV is served via HTTPS, any services that are NOT served via HTTPS might
                             be blocked by your web-browser.<br><br>
                             Loading of unsecured content in the context of an SSL encrypted website where you see a green
                             lock would be misleading, therefore the browser blocks it.<br>
-                            One work-around is to serve Muximux via an unsecured website, or to make sure all the
+                            One work-around is to serve PiTV via an unsecured website, or to make sure all the
                             services/urls you link to use https://</p>
 
                         <p>Alternatively, if you use Chrome or Opera (or any Chromium-based browser), you can install
                             the plugin "Ignore X-Frame headers", which<br>
                             drops X-Frame-Options and Content-Security-Policy HTTP response headers, allowing ALL pages to
                             be
-                            iframed (like we're doing in Muximux).</p>
+                            iframed (like we're doing in PiTV).</p>
 
                         <p>See:
                             <a href="https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe"
                                target="_blank">https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe</a>
                         </p>
 
-                        <p>See <a href="https://github.com/mescon/Muximux/" target="_blank">https://github.com/mescon/Muximux/</a>
+                        <p>See <a href="https://github.com/Shaus-tech/Muximux/" target="_blank">https://github.com/Shaus-tech/Muximux/</a>
                             for more information.</p>
 
                     </div>
@@ -281,7 +281,7 @@ defined("CONFIG") ? null : define('CONFIG', 'settings.ini.php');
             <div class="modal-content logContent" role="document">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="modal-title"><h1>Muximux Log</h1></div>
+                    <div class="modal-title"><h1>PiTV Log</h1></div>
                 </div>
                 <div class="modal-body logBody">
                     <div id="logContainer">

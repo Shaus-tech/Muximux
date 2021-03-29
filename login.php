@@ -30,7 +30,7 @@ if(isset($_POST['username'])) {
 echo '
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Muximux - Application Management Console">
+	<meta name="description" content="PiTV - Application Management Console">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" class="droidtheme" content="#DFDFDF" />
     <meta name="msapplication-navbutton-color" class="mstheme" content="#DFDFDF" />

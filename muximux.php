@@ -12,7 +12,7 @@ if (file_exists('config.ini.php')) {
     copy('config.ini.php', 'backup.ini.php');
     unlink('config.ini.php');
     $upgrade = true;
-    write_log('Converting configuration file from previous Muximux installation.','D');
+    write_log('Converting configuration file from previous PiTV installation.','D');
 } else {
     $upgrade = false;
 }
@@ -151,7 +151,7 @@ function parse_ini()
         $branchList .= "
                                 <option value='".$branchName."' ".(($myBranch == $branchName) ? 'selected' : '' ).">". $branchName ."</option>";
     }
-    $title = $config->get('general', 'title', 'Muximux - Application Management Console');
+    $title = $config->get('general', 'title', 'PiTV - Application Management Console');
     $pageOutput = "<form class='form-inline'>
 
 						<div class='applicationContainer row generalContainer' style='cursor:default;'>
@@ -579,12 +579,12 @@ function menuItems() {
                 </li>
                 <li class='navbtn ".(($splashScreen == "true") ? '' : 'hidden')."'>
 			<a id='showSplash' data-toggle='modal' data-target='#splashModal' data-title='Show Splash'>
-                	<span class='fa muximux-home4 muximux-navbtn-icon fa-lg'></span>
+                	<span class='fa muximux-home2 muximux-navbtn-icon fa-lg'></span>
                     </a>
                 </li>
 
                 <li class='navbtn ".(($authentication == "true") ? '' : 'hidden')."'>
-                    <a id='logout' title='Click this button to log out of Muximux.'>
+                    <a id='logout' title='Click this button to log out of PiTV.'>
                         <span class='fa muximux-sign-out muximux-navbtn-icon fa-lg'></span>
                     </a>
                 </li>
@@ -629,7 +629,7 @@ function menuItems() {
 // Quickie fetch the main title
 function getTitle() {
     $config = new Config_Lite(CONFIG);
-    $item = $config->get('general', 'title', 'Muximux - Application Management Console');
+    $item = $config->get('general', 'title', 'PiTV - Application Management Console');
     return $item;
 
 }
@@ -662,7 +662,7 @@ function fetchBranches($skip) {
         } else {
             write_log('Refreshing branches from github - manually triggered.');
         }
-        $url = 'https://api.github.com/repos/mescon/Muximux/branches';
+        $url = 'https://api.github.com/repos/Shaus-tech/Muximux/branches';
             $options = array(
           'http'=>array(
             'method'=>"GET",
@@ -776,10 +776,10 @@ function metaTags() {
     $authentication = ($config->getBool('general', 'authentication', false) ? 'true' : 'false');
     $autohide = ($config->getBool('general', 'autohide', false) ? 'true' : 'false');
     $branch = $config->get('general', 'branch', 'master');
-    $branchUrl = "https://api.github.com/repos/mescon/Muximux/commits?sha=" . $branch;
+    $branchUrl = "https://api.github.com/repos/Shaus-tech/Muximux/commits?sha=" . $branch;
     $popupdate = ($config->getBool('general', 'updatepopup', false) ? 'true' : 'false');
     $enabledropdown = ($config->getBool('settings', 'enabledropdown', true) ? 'true' : 'false');
-    $maintitle = $config->get('general', 'title', 'Muximux');
+    $maintitle = $config->get('general', 'title', 'PiTV');
     $tabcolor = ($config->getBool('general', 'tabcolor', false) ? 'true' : 'false');
     $splashScreen = ($config->getBool('general', 'splashscreen', false) ? 'true' : 'false');
     $css = getThemeFile();
@@ -1034,7 +1034,7 @@ function downloadUpdate($sha) {
 	} else {
 		$result = false;
 		$zipFile = "Muximux-".$sha. ".zip";
-		$f = file_put_contents($zipFile, fopen("https://github.com/mescon/Muximux/archive/". $sha .".zip", 'r'), LOCK_EX);
+		$f = file_put_contents($zipFile, fopen("https://github.com/Shaus-tech/Muximux/archive/". $sha .".zip", 'r'), LOCK_EX);
 		if(FALSE === $f) {
 			$result = 'Install Failed!  An error occurred saving the update.  Please check directory permissions and try again.';
 		} else {
