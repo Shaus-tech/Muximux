@@ -29,7 +29,7 @@ defined("CONFIG") ? null : define('CONFIG', 'settings.ini.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Muximux - Application Management Console">
+    <meta name="description" content="PiTV - Application Management Console">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png?v=ngGoyLXN9n">
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png?v=ngGoyLXN9n" sizes="32x32">
@@ -37,8 +37,8 @@ defined("CONFIG") ? null : define('CONFIG', 'settings.ini.php');
     <link rel="manifest" href="images/favicon/manifest.json?v=ngGoyLXN9n">
     <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg?v=ngGoyLXN9n" color="#5bbad5">
     <link rel="shortcut icon" href="images/favicon/favicon.ico?v=ngGoyLXN9n">
-    <meta name="apple-mobile-web-app-title" content="Muximux">
-    <meta name="application-name" content="Muximux">
+    <meta name="apple-mobile-web-app-title" content="PiTV">
+    <meta name="application-name" content="PiTV">
     <meta name="msapplication-config" content="images/favicon/browserconfig.xml?v=ngGoyLXN9n">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/loader.css"/>
@@ -56,7 +56,7 @@ defined("CONFIG") ? null : define('CONFIG', 'settings.ini.php');
         </div>
     </div>
     <div class="loader-header">
-        <h4>Muximux is loading...</h4>
+        <h4>PiTV is loading...</h4>
     </div>
     <div class="loader-body">
         <div class="loader">
