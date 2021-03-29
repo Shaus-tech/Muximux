@@ -1,5 +1,5 @@
 var branch = $("#branch-data").attr('data');
-var commitURL = "https://api.github.com/repos/mescon/Muximux/commits?sha=" + branch;
+var commitURL = "https://api.github.com/repos/Shaus-tech/Muximux/commits?sha=" + branch;
 var localversion = $("#sha-data").attr('data');
 var cwd = $("#cwd-data").attr('data');
 var phpini = $("#phpini-data").attr('data');
@@ -267,7 +267,7 @@ function viewChangelog() {
 	
     $.getJSON(commitURL, function(result) {
         json = result;
-        var compareURL = "https://github.com/mescon/Muximux/compare/" + localversion + "..." + json[0].sha;
+        var compareURL = "https://github.com/Shaus-tech/Muximux/compare/" + localversion + "..." + json[0].sha;
         difference = 0;
         for (var i in json) {
             if (json[i].sha == localversion) {
@@ -285,7 +285,7 @@ function viewChangelog() {
     if (difference > 0) {
         output += "The changes from your version to the latest version can be read <a href=\"" + compareURL + "\" target=\"_blank\">here</a>.</p>";
     }
-    output += "<p>Updates to your version of <a href='https://github.com/mescon/Muximux/' target='_blank'>Muximux</a> were uploaded to Github " + (differenceDays == 1 ? 'today' : differenceDays - 1 + (differenceDays == 2 ? ' day ago' : ' days ago') ) + ".</p>";
+    output += "<p>Updates to your version of <a href='https://github.com/Shaus-tech/Muximux/' target='_blank'>PiTV</a> were uploaded to Github " + (differenceDays == 1 ? 'today' : differenceDays - 1 + (differenceDays == 2 ? ' day ago' : ' days ago') ) + ".</p>";
     output += "<div class='btn-group' role='group' aria-label='Buttons' id='topButtons'>";
     if (difference > 0) {
         output +="<a class='btn btn-primary' id='downloadUpdate'><span class='fa fa-arrow-circle-down'></span> Install Now</a>";
@@ -294,7 +294,7 @@ function viewChangelog() {
                     "</div>";
     if (difference > 0) {
 
-        output += "<p>Or you can manually download <a href='https://github.com/mescon/Muximux/archive/" + branch + ".zip' target='_blank'>the latest zip here.</a></p>";
+        output += "<p>Or you can manually download <a href='https://github.com/Shaus-tech/Muximux/archive/" + branch + ".zip' target='_blank'>the latest zip here.</a></p>";
         output += "<h3>Changelog (" + branch + ")</h3><ul>";
         var i=0;
         do {
@@ -410,7 +410,7 @@ function updateBox($force) {
     } 
 	json = JSON.parse(sessionStorage.getItem('JSONData'));
 	
-    var compareURL = "https://github.com/mescon/Muximux/compare/" + localversion + "..." + json[0].sha;
+    var compareURL = "https://github.com/Shaus-tech/Muximux/compare/" + localversion + "..." + json[0].sha;
     var difference = 0;
     for (var i in json) {
         if (json[i].sha == localversion) {
